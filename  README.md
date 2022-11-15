@@ -19,7 +19,8 @@ docker-compose up -d
 ### Poblar DB con datos de Prueba
 
 ```
-docker-compose up -d
+python poblar_db.py
+
 ```
 
 ### Ejecutar Proceco de Pagos
