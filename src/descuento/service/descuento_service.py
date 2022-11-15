@@ -10,8 +10,9 @@ class DescuentoService:
     def descontar_aplicacion(self, descuentos_aplicar: list):
         for des in descuentos_aplicar:
             descuento_domain = DescuentoDomain.map_from_obj(des)
+            descuento_domain.descontar_aplicacion()
             descuento_update = dict()
             descuento_update[
                 "cantidad_aplicaciones"
-            ] = descuento_domain.descontar_aplicacion()
+            ] = descuento_domain.cantidad_aplicaciones
             self._descuento_dao.update_descuento(descuento_domain.id, descuento_update)

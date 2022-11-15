@@ -20,7 +20,5 @@ class DescuentoDomain(ObjBase):
 
     def descontar_aplicacion(self) -> bool:
         if self.validar_disponibilidad():
-            self.cantidad_aplicaciones - 1
+            self.cantidad_aplicaciones -= 1
             return True
-        else:
-            return False
