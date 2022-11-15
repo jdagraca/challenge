@@ -12,7 +12,7 @@ class ProcesarPagos:
             socios_activos = socio_service.get_socios_activos()
 
             for socio in socios_activos:
-                ProcesarPagos.run_procesar_pago(socio.id)
+                ProcesarPagos._run_procesar_pago(socio.id)
 
         except Exception as ex:
             print(ex)
